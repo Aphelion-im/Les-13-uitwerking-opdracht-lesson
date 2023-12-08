@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "f8ad0fb9-2ab3-4f7a-b235-4b0f42c8cd22",
+		"name": "Les 13 - Workshop (2023/08) + Opdracht \"Lesson\"",
+		"description": "[https://github.com/hogeschoolnovi/backend-spring-boot-lesopdracht-les13](https://github.com/hogeschoolnovi/backend-spring-boot-lesopdracht-les13)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24308684"
+	},
+	"item": [
+		{
+			"name": "createTeacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"firstName\" : \"Pietje\",\r\n \"lastName\" : \"Puk\",\r\n \"dob\" : \"2000-12-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/teachers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCourse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"title\" : \"Biologie\",\r\n \"sp\" : 5,\r\n \"teacherIds\" : [1, 2],\r\n \"lessonIds\" : [1, 3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createLesson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"topic\" : \"Dinosaurs\",\r\n\"courseId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lessons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lessons"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
